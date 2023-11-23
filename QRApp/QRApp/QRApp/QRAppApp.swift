@@ -9,9 +9,18 @@ import SwiftUI
 
 @main
 struct QRAppApp: App {
+    let persistenceController = PersistenceController.shared
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView(content: {
+                NavigationLink(destination: HomeScreenView()) {
+                    
+                    
+                }
+            })
+            HomeScreenView()
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

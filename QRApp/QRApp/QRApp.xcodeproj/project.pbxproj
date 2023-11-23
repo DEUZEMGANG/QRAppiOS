@@ -7,17 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8468A1B82B0F841C0035CE4F /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8468A1B72B0F841C0035CE4F /* HomeScreenView.swift */; };
+		8468A1BA2B0F84610035CE4F /* Persistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8468A1B92B0F84610035CE4F /* Persistance.swift */; };
+		8468A1C02B0F87010035CE4F /* QRApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8468A1BE2B0F87010035CE4F /* QRApp.xcdatamodeld */; };
+		8468A1C22B0F8FAE0035CE4F /* QRScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8468A1C12B0F8FAE0035CE4F /* QRScannerController.swift */; };
 		BC58B4902B0F5BF00073EFFF /* QRAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC58B48F2B0F5BF00073EFFF /* QRAppApp.swift */; };
-		BC58B4922B0F5BF00073EFFF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC58B4912B0F5BF00073EFFF /* ContentView.swift */; };
+		BC58B4922B0F5BF00073EFFF /* QrScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC58B4912B0F5BF00073EFFF /* QrScannerView.swift */; };
 		BC58B4942B0F5BF50073EFFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC58B4932B0F5BF50073EFFF /* Assets.xcassets */; };
 		BC58B4972B0F5BF50073EFFF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC58B4962B0F5BF50073EFFF /* Preview Assets.xcassets */; };
 		BC58B4A02B0F608E0073EFFF /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = BC58B49F2B0F608E0073EFFF /* CodeScanner */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8468A1B72B0F841C0035CE4F /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
+		8468A1B92B0F84610035CE4F /* Persistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistance.swift; sourceTree = "<group>"; };
+		8468A1BF2B0F87010035CE4F /* QRApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QRApp.xcdatamodel; sourceTree = "<group>"; };
+		8468A1C12B0F8FAE0035CE4F /* QRScannerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerController.swift; sourceTree = "<group>"; };
 		BC58B48C2B0F5BF00073EFFF /* QRApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC58B48F2B0F5BF00073EFFF /* QRAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRAppApp.swift; sourceTree = "<group>"; };
-		BC58B4912B0F5BF00073EFFF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BC58B4912B0F5BF00073EFFF /* QrScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrScannerView.swift; sourceTree = "<group>"; };
 		BC58B4932B0F5BF50073EFFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC58B4962B0F5BF50073EFFF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BC58B49D2B0F5FB10073EFFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -35,6 +43,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84C2AEE42B0F7A9E0034B48B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		84C2AEE52B0F7AA30034B48B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8468A1C12B0F8FAE0035CE4F /* QRScannerController.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		84C2AEE62B0F7ABF0034B48B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC58B4912B0F5BF00073EFFF /* QrScannerView.swift */,
+				8468A1B72B0F841C0035CE4F /* HomeScreenView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		BC58B4832B0F5BF00073EFFF = {
 			isa = PBXGroup;
 			children = (
@@ -54,11 +86,15 @@
 		BC58B48E2B0F5BF00073EFFF /* QRApp */ = {
 			isa = PBXGroup;
 			children = (
-				BC58B49D2B0F5FB10073EFFF /* Info.plist */,
 				BC58B48F2B0F5BF00073EFFF /* QRAppApp.swift */,
-				BC58B4912B0F5BF00073EFFF /* ContentView.swift */,
+				84C2AEE62B0F7ABF0034B48B /* View */,
+				84C2AEE42B0F7A9E0034B48B /* Models */,
+				84C2AEE52B0F7AA30034B48B /* ViewModels */,
+				BC58B49D2B0F5FB10073EFFF /* Info.plist */,
 				BC58B4932B0F5BF50073EFFF /* Assets.xcassets */,
 				BC58B4952B0F5BF50073EFFF /* Preview Content */,
+				8468A1B92B0F84610035CE4F /* Persistance.swift */,
+				8468A1BE2B0F87010035CE4F /* QRApp.xcdatamodeld */,
 			);
 			path = QRApp;
 			sourceTree = "<group>";
@@ -147,7 +183,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC58B4922B0F5BF00073EFFF /* ContentView.swift in Sources */,
+				8468A1C02B0F87010035CE4F /* QRApp.xcdatamodeld in Sources */,
+				8468A1B82B0F841C0035CE4F /* HomeScreenView.swift in Sources */,
+				8468A1BA2B0F84610035CE4F /* Persistance.swift in Sources */,
+				8468A1C22B0F8FAE0035CE4F /* QRScannerController.swift in Sources */,
+				BC58B4922B0F5BF00073EFFF /* QrScannerView.swift in Sources */,
 				BC58B4902B0F5BF00073EFFF /* QRAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,7 +326,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QRApp/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "We need the camera to scan QR codes.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need to access your camera for scanning QR code";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -318,7 +358,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QRApp/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "We need the camera to scan QR codes.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need to access your camera for scanning QR code";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -379,6 +419,19 @@
 			productName = CodeScanner;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		8468A1BE2B0F87010035CE4F /* QRApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8468A1BF2B0F87010035CE4F /* QRApp.xcdatamodel */,
+			);
+			currentVersion = 8468A1BF2B0F87010035CE4F /* QRApp.xcdatamodel */;
+			path = QRApp.xcdatamodeld;
+			sourceTree = SOURCE_ROOT;
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BC58B4842B0F5BF00073EFFF /* Project object */;
 }
