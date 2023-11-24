@@ -10,6 +10,7 @@ import CoreData
  
 struct HomeScreenView: View {
     
+    
     let navigationBarTitle: String = "Qr Scanner"
     @State var lessons : [String] = ["QR SCANNER"]
     
@@ -67,8 +68,9 @@ struct VStack<T: Hashable, Content: View>: View  {
     
     private func itemsTpl() -> some View {
         ForEach(items, id : \.hashValue) { item in
-            Button {
-                print("go to course content")
+            
+            NavigationLink {
+                QrScannerView()
             } label: {
                 content(item)
                 .containerRelativeFrame(
@@ -85,8 +87,6 @@ struct VStack<T: Hashable, Content: View>: View  {
                         .opacity(phase.isIdentity ? 1 : 0)
                 }
             }
-
-
         }
     }
 }
