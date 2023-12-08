@@ -5,6 +5,11 @@
 //  Created by admin on 23.11.2023.
 //
 
+
+
+
+//MARK: - NO Library to scan
+/*
 import Foundation
 import SwiftUI
 import Foundation
@@ -115,6 +120,6 @@ class QRScannerController: UIViewController {
 
 }
 
-
+*/
 
 

@@ -11,13 +11,13 @@ import CoreData
 struct HomeScreenView: View {
     
     
-    let navigationBarTitle: String = "Qr Scanner"
-    @State var lessons : [String] = ["QR SCANNER"]
+    let navigationBarTitle: String = "Home Screen"
+    @State var lessons : [String] = ["Qr Scanner","Find iBeacon"]
     
     var body: some View {
         NavigationStack{
             ScrollView(.vertical){
-                VStack(items: lessons){ lesson in
+                HomeScreenStack(items: lessons){ lesson in
                     ZStack{
                         RoundedRectangle(cornerRadius: 24.0)
                             .foregroundStyle(.blue)
@@ -25,7 +25,7 @@ struct HomeScreenView: View {
                                 Text("\(lesson)")
                                     .font(.largeTitle)
                                     .fontWeight(.bold)
-                                    .foregroundStyle(.white)
+                                    .foregroundStyle(.black)
                                     
                             }
                         RoundedRectangle(cornerRadius: 24.0)
@@ -48,7 +48,7 @@ struct HomeScreenView: View {
     }
 }
 
-struct VStack<T: Hashable, Content: View>: View  {
+struct HomeScreenStack<T: Hashable, Content: View>: View  {
     
     // MARK: - Properties
     
@@ -70,7 +70,12 @@ struct VStack<T: Hashable, Content: View>: View  {
         ForEach(items, id : \.hashValue) { item in
             
             NavigationLink {
-                QrScannerView()
+                if(item == items[0]){
+                    QrScannerView()
+                }
+                else if(item == items[1]){
+                    ContentView()
+                }
             } label: {
                 content(item)
                 .containerRelativeFrame(
@@ -94,3 +99,4 @@ struct VStack<T: Hashable, Content: View>: View  {
 #Preview {
     HomeScreenView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
 }
+

@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		845ED7712B1615B9001F0A10 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845ED7702B1615B9001F0A10 /* SignInView.swift */; };
+		845ED7752B1624BA001F0A10 /* IbeaconDetect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845ED7742B1624BA001F0A10 /* IbeaconDetect.swift */; };
 		8468A1B82B0F841C0035CE4F /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8468A1B72B0F841C0035CE4F /* HomeScreenView.swift */; };
 		8468A1BA2B0F84610035CE4F /* Persistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8468A1B92B0F84610035CE4F /* Persistance.swift */; };
 		8468A1C02B0F87010035CE4F /* QRApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8468A1BE2B0F87010035CE4F /* QRApp.xcdatamodeld */; };
 		8468A1C22B0F8FAE0035CE4F /* QRScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8468A1C12B0F8FAE0035CE4F /* QRScannerController.swift */; };
+		84A6FBDE2B1084C4003156FC /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A6FBDD2B1084C4003156FC /* Color.swift */; };
+		84FA154C2B21EED9003B47B2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA154B2B21EED9003B47B2 /* ContentView.swift */; };
 		BC58B4902B0F5BF00073EFFF /* QRAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC58B48F2B0F5BF00073EFFF /* QRAppApp.swift */; };
 		BC58B4922B0F5BF00073EFFF /* QrScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC58B4912B0F5BF00073EFFF /* QrScannerView.swift */; };
 		BC58B4942B0F5BF50073EFFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC58B4932B0F5BF50073EFFF /* Assets.xcassets */; };
@@ -19,10 +23,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		845ED7702B1615B9001F0A10 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		845ED7742B1624BA001F0A10 /* IbeaconDetect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IbeaconDetect.swift; sourceTree = "<group>"; };
 		8468A1B72B0F841C0035CE4F /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		8468A1B92B0F84610035CE4F /* Persistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistance.swift; sourceTree = "<group>"; };
 		8468A1BF2B0F87010035CE4F /* QRApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QRApp.xcdatamodel; sourceTree = "<group>"; };
 		8468A1C12B0F8FAE0035CE4F /* QRScannerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerController.swift; sourceTree = "<group>"; };
+		84A6FBDD2B1084C4003156FC /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		84FA154B2B21EED9003B47B2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BC58B48C2B0F5BF00073EFFF /* QRApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC58B48F2B0F5BF00073EFFF /* QRAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRAppApp.swift; sourceTree = "<group>"; };
 		BC58B4912B0F5BF00073EFFF /* QrScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrScannerView.swift; sourceTree = "<group>"; };
@@ -43,11 +51,89 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		84C2AEE42B0F7A9E0034B48B /* Models */ = {
+		845ED7722B162492001F0A10 /* Ibeacon */ = {
+			isa = PBXGroup;
+			children = (
+				84FA154D2B21EF58003B47B2 /* View */,
+				84FA154F2B21EF6E003B47B2 /* ViewModel */,
+			);
+			path = Ibeacon;
+			sourceTree = "<group>";
+		};
+		845ED7732B16249D001F0A10 /* IbeaconDetect */ = {
+			isa = PBXGroup;
+			children = (
+				845ED7742B1624BA001F0A10 /* IbeaconDetect.swift */,
+			);
+			path = IbeaconDetect;
+			sourceTree = "<group>";
+		};
+		84A6FBD72B108004003156FC /* QrScanner */ = {
+			isa = PBXGroup;
+			children = (
+				84A6FBE02B108625003156FC /* View */,
+				84C2AEE52B0F7AA30034B48B /* ViewModels */,
+			);
+			path = QrScanner;
+			sourceTree = "<group>";
+		};
+		84A6FBD82B108024003156FC /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				84C2AEE62B0F7ABF0034B48B /* View */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		84A6FBD92B108047003156FC /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				845ED7702B1615B9001F0A10 /* SignInView.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		84A6FBDA2B10806F003156FC /* LogIn */ = {
+			isa = PBXGroup;
+			children = (
+				84A6FBDB2B108084003156FC /* SignUp */,
+				84A6FBD92B108047003156FC /* SignIn */,
+			);
+			path = LogIn;
+			sourceTree = "<group>";
+		};
+		84A6FBDB2B108084003156FC /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Models;
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		84A6FBDC2B10845B003156FC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				84A6FBDD2B1084C4003156FC /* Color.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		84A6FBDF2B1085C7003156FC /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				845ED7722B162492001F0A10 /* Ibeacon */,
+				84A6FBD72B108004003156FC /* QrScanner */,
+				84A6FBDA2B10806F003156FC /* LogIn */,
+				84A6FBD82B108024003156FC /* HomeScreen */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		84A6FBE02B108625003156FC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC58B4912B0F5BF00073EFFF /* QrScannerView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		84C2AEE52B0F7AA30034B48B /* ViewModels */ = {
@@ -61,10 +147,25 @@
 		84C2AEE62B0F7ABF0034B48B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BC58B4912B0F5BF00073EFFF /* QrScannerView.swift */,
 				8468A1B72B0F841C0035CE4F /* HomeScreenView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		84FA154D2B21EF58003B47B2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84FA154B2B21EED9003B47B2 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84FA154F2B21EF6E003B47B2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				845ED7732B16249D001F0A10 /* IbeaconDetect */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		BC58B4832B0F5BF00073EFFF = {
@@ -87,13 +188,12 @@
 			isa = PBXGroup;
 			children = (
 				BC58B48F2B0F5BF00073EFFF /* QRAppApp.swift */,
-				84C2AEE62B0F7ABF0034B48B /* View */,
-				84C2AEE42B0F7A9E0034B48B /* Models */,
-				84C2AEE52B0F7AA30034B48B /* ViewModels */,
-				BC58B49D2B0F5FB10073EFFF /* Info.plist */,
+				8468A1B92B0F84610035CE4F /* Persistance.swift */,
+				84A6FBDF2B1085C7003156FC /* Core */,
+				84A6FBDC2B10845B003156FC /* Extensions */,
 				BC58B4932B0F5BF50073EFFF /* Assets.xcassets */,
 				BC58B4952B0F5BF50073EFFF /* Preview Content */,
-				8468A1B92B0F84610035CE4F /* Persistance.swift */,
+				BC58B49D2B0F5FB10073EFFF /* Info.plist */,
 				8468A1BE2B0F87010035CE4F /* QRApp.xcdatamodeld */,
 			);
 			path = QRApp;
@@ -184,11 +284,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				8468A1C02B0F87010035CE4F /* QRApp.xcdatamodeld in Sources */,
+				84FA154C2B21EED9003B47B2 /* ContentView.swift in Sources */,
 				8468A1B82B0F841C0035CE4F /* HomeScreenView.swift in Sources */,
+				84A6FBDE2B1084C4003156FC /* Color.swift in Sources */,
 				8468A1BA2B0F84610035CE4F /* Persistance.swift in Sources */,
 				8468A1C22B0F8FAE0035CE4F /* QRScannerController.swift in Sources */,
 				BC58B4922B0F5BF00073EFFF /* QrScannerView.swift in Sources */,
+				845ED7712B1615B9001F0A10 /* SignInView.swift in Sources */,
 				BC58B4902B0F5BF00073EFFF /* QRAppApp.swift in Sources */,
+				845ED7752B1624BA001F0A10 /* IbeaconDetect.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,11 +426,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"QRApp/Preview Content\"";
-				DEVELOPMENT_TEAM = P3HGUZTV4B;
+				DEVELOPMENT_TEAM = M54CWY29DZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QRApp/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "We need to access your camera for scanning QR code";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Can use your camera";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Need your location to outhan";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need your location.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -338,7 +445,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.merih.QRApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cangirhabil.QRApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -354,11 +461,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"QRApp/Preview Content\"";
-				DEVELOPMENT_TEAM = P3HGUZTV4B;
+				DEVELOPMENT_TEAM = M54CWY29DZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QRApp/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "We need to access your camera for scanning QR code";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Can use your camera";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Need your location to outhan";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need your location.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -370,7 +480,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.merih.QRApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cangirhabil.QRApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
