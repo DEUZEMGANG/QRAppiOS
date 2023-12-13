@@ -13,7 +13,7 @@ import CodeScanner
 struct QrScannerView: View {
     
     @State var isPresentingScanner = false
-    @State var scannedCode: String = "Scan a QR"
+    @State public static var scannedCode: String = "Scan a QR"
     
     var scannerSheet: some View {
         CodeScannerView(
@@ -22,7 +22,7 @@ struct QrScannerView: View {
             shouldVibrateOnSuccess: true
         ) { Result in
             if case let .success(code) = Result{
-                self.scannedCode = code.string
+                QrScannerView.scannedCode = code.string
                 self.isPresentingScanner = false
             }
         }
@@ -31,7 +31,7 @@ struct QrScannerView: View {
     
     var body: some View {
         VStack(spacing: 10){
-            Text(scannedCode)
+            Text(QrScannerView.scannedCode)
                 .multilineTextAlignment(.leading)
                 .padding(.vertical, 80)
                 .padding(.horizontal)

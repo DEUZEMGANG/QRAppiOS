@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		845ED7712B1615B9001F0A10 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845ED7702B1615B9001F0A10 /* SignInView.swift */; };
+		845ED7712B1615B9001F0A10 /* SignInUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845ED7702B1615B9001F0A10 /* SignInUpView.swift */; };
 		845ED7752B1624BA001F0A10 /* IbeaconDetect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845ED7742B1624BA001F0A10 /* IbeaconDetect.swift */; };
 		8468A1B82B0F841C0035CE4F /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8468A1B72B0F841C0035CE4F /* HomeScreenView.swift */; };
 		8468A1BA2B0F84610035CE4F /* Persistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8468A1B92B0F84610035CE4F /* Persistance.swift */; };
 		8468A1C02B0F87010035CE4F /* QRApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8468A1BE2B0F87010035CE4F /* QRApp.xcdatamodeld */; };
 		8468A1C22B0F8FAE0035CE4F /* QRScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8468A1C12B0F8FAE0035CE4F /* QRScannerController.swift */; };
 		84A6FBDE2B1084C4003156FC /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A6FBDD2B1084C4003156FC /* Color.swift */; };
+		84C044312B28D928000DD8B4 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C044302B28D928000DD8B4 /* AppColor.swift */; };
+		84C044352B28DA47000DD8B4 /* IBeaconModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C044342B28DA47000DD8B4 /* IBeaconModel.swift */; };
 		84FA154C2B21EED9003B47B2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA154B2B21EED9003B47B2 /* ContentView.swift */; };
 		BC58B4902B0F5BF00073EFFF /* QRAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC58B48F2B0F5BF00073EFFF /* QRAppApp.swift */; };
 		BC58B4922B0F5BF00073EFFF /* QrScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC58B4912B0F5BF00073EFFF /* QrScannerView.swift */; };
@@ -23,13 +25,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		845ED7702B1615B9001F0A10 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		845ED7702B1615B9001F0A10 /* SignInUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUpView.swift; sourceTree = "<group>"; };
 		845ED7742B1624BA001F0A10 /* IbeaconDetect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IbeaconDetect.swift; sourceTree = "<group>"; };
 		8468A1B72B0F841C0035CE4F /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		8468A1B92B0F84610035CE4F /* Persistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistance.swift; sourceTree = "<group>"; };
 		8468A1BF2B0F87010035CE4F /* QRApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QRApp.xcdatamodel; sourceTree = "<group>"; };
 		8468A1C12B0F8FAE0035CE4F /* QRScannerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerController.swift; sourceTree = "<group>"; };
 		84A6FBDD2B1084C4003156FC /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		84C044302B28D928000DD8B4 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppColor.swift; path = ../../../../../../../../Documents/AppColor.swift; sourceTree = "<group>"; };
+		84C044342B28DA47000DD8B4 /* IBeaconModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBeaconModel.swift; sourceTree = "<group>"; };
 		84FA154B2B21EED9003B47B2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BC58B48C2B0F5BF00073EFFF /* QRApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC58B48F2B0F5BF00073EFFF /* QRAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRAppApp.swift; sourceTree = "<group>"; };
@@ -85,28 +89,12 @@
 			path = HomeScreen;
 			sourceTree = "<group>";
 		};
-		84A6FBD92B108047003156FC /* SignIn */ = {
-			isa = PBXGroup;
-			children = (
-				845ED7702B1615B9001F0A10 /* SignInView.swift */,
-			);
-			path = SignIn;
-			sourceTree = "<group>";
-		};
 		84A6FBDA2B10806F003156FC /* LogIn */ = {
 			isa = PBXGroup;
 			children = (
-				84A6FBDB2B108084003156FC /* SignUp */,
-				84A6FBD92B108047003156FC /* SignIn */,
+				845ED7702B1615B9001F0A10 /* SignInUpView.swift */,
 			);
 			path = LogIn;
-			sourceTree = "<group>";
-		};
-		84A6FBDB2B108084003156FC /* SignUp */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SignUp;
 			sourceTree = "<group>";
 		};
 		84A6FBDC2B10845B003156FC /* Extensions */ = {
@@ -120,6 +108,8 @@
 		84A6FBDF2B1085C7003156FC /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				84C044322B28D937000DD8B4 /* Resources */,
+				84C0442F2B28D907000DD8B4 /* Themes */,
 				845ED7722B162492001F0A10 /* Ibeacon */,
 				84A6FBD72B108004003156FC /* QrScanner */,
 				84A6FBDA2B10806F003156FC /* LogIn */,
@@ -134,6 +124,38 @@
 				BC58B4912B0F5BF00073EFFF /* QrScannerView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		84C0442E2B28D8BB000DD8B4 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				BC58B48F2B0F5BF00073EFFF /* QRAppApp.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		84C0442F2B28D907000DD8B4 /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				84C044302B28D928000DD8B4 /* AppColor.swift */,
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
+		84C044322B28D937000DD8B4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BC58B4932B0F5BF50073EFFF /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		84C044332B28DA2A000DD8B4 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				84C044342B28DA47000DD8B4 /* IBeaconModel.swift */,
+			);
+			path = Feature;
 			sourceTree = "<group>";
 		};
 		84C2AEE52B0F7AA30034B48B /* ViewModels */ = {
@@ -187,11 +209,11 @@
 		BC58B48E2B0F5BF00073EFFF /* QRApp */ = {
 			isa = PBXGroup;
 			children = (
-				BC58B48F2B0F5BF00073EFFF /* QRAppApp.swift */,
+				84C044332B28DA2A000DD8B4 /* Feature */,
+				84C0442E2B28D8BB000DD8B4 /* Application */,
 				8468A1B92B0F84610035CE4F /* Persistance.swift */,
 				84A6FBDF2B1085C7003156FC /* Core */,
 				84A6FBDC2B10845B003156FC /* Extensions */,
-				BC58B4932B0F5BF50073EFFF /* Assets.xcassets */,
 				BC58B4952B0F5BF50073EFFF /* Preview Content */,
 				BC58B49D2B0F5FB10073EFFF /* Info.plist */,
 				8468A1BE2B0F87010035CE4F /* QRApp.xcdatamodeld */,
@@ -286,12 +308,14 @@
 				8468A1C02B0F87010035CE4F /* QRApp.xcdatamodeld in Sources */,
 				84FA154C2B21EED9003B47B2 /* ContentView.swift in Sources */,
 				8468A1B82B0F841C0035CE4F /* HomeScreenView.swift in Sources */,
+				84C044352B28DA47000DD8B4 /* IBeaconModel.swift in Sources */,
 				84A6FBDE2B1084C4003156FC /* Color.swift in Sources */,
 				8468A1BA2B0F84610035CE4F /* Persistance.swift in Sources */,
 				8468A1C22B0F8FAE0035CE4F /* QRScannerController.swift in Sources */,
 				BC58B4922B0F5BF00073EFFF /* QrScannerView.swift in Sources */,
-				845ED7712B1615B9001F0A10 /* SignInView.swift in Sources */,
+				845ED7712B1615B9001F0A10 /* SignInUpView.swift in Sources */,
 				BC58B4902B0F5BF00073EFFF /* QRAppApp.swift in Sources */,
+				84C044312B28D928000DD8B4 /* AppColor.swift in Sources */,
 				845ED7752B1624BA001F0A10 /* IbeaconDetect.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,7 +375,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -408,7 +432,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -437,9 +461,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -447,6 +472,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cangirhabil.QRApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -472,9 +500,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -482,6 +511,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cangirhabil.QRApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

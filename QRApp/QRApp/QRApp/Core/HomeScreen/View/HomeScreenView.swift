@@ -5,6 +5,7 @@
 //  Created by admin on 17.11.2023.
 //
 
+/*
 import SwiftUI
 import CoreData
  
@@ -99,4 +100,4 @@ struct HomeScreenStack<T: Hashable, Content: View>: View  {
 #Preview {
     HomeScreenView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
 }
-
+*/
