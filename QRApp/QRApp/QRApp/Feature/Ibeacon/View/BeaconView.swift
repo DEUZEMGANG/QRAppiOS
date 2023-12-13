@@ -4,68 +4,12 @@
 //
 //  Created by admin on 7.12.2023.
 //
-
+/*
 import SwiftUI
 import CoreLocation
 
-/*
-import SwiftUI
-
-struct ContentView: View {
-    @StateObject var detector = IBeaconDetector()
-   
-    var body: some View {
-        VStack {
-            //MARK: Showing range levels
-            switch detector.lastDistance {
-            case .immediate:
-                Text("Immediate")
-                    .font(.largeTitle)
-            case .near:
-                Text("Near")
-                    .font(.largeTitle)
-            case .far:
-                Text("Far")
-                    .font(.largeTitle)
-            case .unknown:
-                Text("Unknown")
-                    .font(.largeTitle)
-            @unknown default:
-                Text("Unknown")
-                    .font(.largeTitle)
-            }
-
-
-            //MARK: Showing Accuracy in metres
-            Text(String(format: "Accuracy: %0.2fm", detector.accuracy))
-                .font(.largeTitle)
-                .padding(.top, 40)
-            
-
-            //MARK: Start and Stop ranging
-            Button(detector.isStartBeacon ? "Stop Ranging" : "Start Ranging") {
-                //toggle the isStartBeacon
-                detector.isStartBeacon.toggle()
-                
-                //if isStartBeacon is false, reset the lastdistance and accuracy
-                if detector.isStartBeacon == false {
-                    detector.lastDistance = .unknown
-                    detector.accuracy = 0.0
-                }
-                
-                //recheck the authorization to start or stop ranging
-                detector.locationManagerDidChangeAuthorization(detector.locationManager)
-            }
-            .buttonStyle(.borderedProminent)
-            .padding(.top, 80)
-            
-        }
-    }
-}
-*/
-
-struct ContentView: View {
-    @StateObject var detector = IBeaconDetector()
+struct BeaconView: View {
+    @StateObject var detector = BeaconDetector()
    
     var body: some View {
         VStack {
@@ -140,5 +84,6 @@ struct ContentView: View {
 
 
 #Preview {
-    ContentView()
+    BeaconView()
 }
+*/

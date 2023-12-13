@@ -15,20 +15,23 @@ import SwiftUI
  BTW. If you buy beacons, they should come with an application (usually a Mac or Windows application) that lets you change their ID. So if Joe's Carwash application uses beacons, Joe buys 100 beacons, and then sets them all up to he ID that Joe's Carwash app recognises. Otherwise Joe would be in real trouble if a beacon breaks, needs replacing, and then Joe needs to update his app. Instead if a beacon breaks that was set to ID xxxxx, Joe buys a new beacons, changes its ID to xxxxx, and puts it where the previous beacon was.
  */
 
-class IBeaconDetector: NSObject, CLLocationManagerDelegate, ObservableObject {
+
+
+
+class BeaconDetector: NSObject, CLLocationManagerDelegate, ObservableObject {
     
+    var scannedCode: String
     public var locationManager = CLLocationManager()
-    //@State var qrInfo = QrScannerView.scannedCode
     
     //MARK: IBeacon Attribute
     @Published  var lastDistance = CLProximity.unknown
     @Published var accuracy: CLLocationAccuracy = 0.0
     @Published var isStartBeacon: Bool = false
     
-    override init() {
+    init(scannedCode: String) {
+        self.scannedCode = QrScannerView.staticScannedCode
+        
         super.init()
-        
-        
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
     }
@@ -43,23 +46,23 @@ class IBeaconDetector: NSObject, CLLocationManagerDelegate, ObservableObject {
     
     
     func startIBeacon() {
-        let uuid = UUID(uuidString: "11C22424-B17F-4AEE-966D-3B137E918D7F")!
-        let constraint = CLBeaconIdentityConstraint(uuid: uuid, major: 5, minor: 20)
-        let beaconRange = CLBeaconRegion(beaconIdentityConstraint: constraint, identifier: "first2")
+        let uuid = UUID(uuidString: scannedCode)!
+        let constraint = CLBeaconIdentityConstraint(uuid: uuid)
+        let beaconRange = CLBeaconRegion(beaconIdentityConstraint: constraint, identifier: "DeuzemApp")
         
         locationManager.startMonitoring(for: beaconRange)
         locationManager.startRangingBeacons(satisfying: constraint)
-        print("found")
+        print("startIBeacon")
     }
     
     func stopIBeacon() {
-        let uuid = UUID(uuidString: "11C22424-B17F-4AEE-966D-3B137E918D7F")!
-        let constraint = CLBeaconIdentityConstraint(uuid: uuid, major: 5, minor: 20)
-        let beaconRange = CLBeaconRegion(beaconIdentityConstraint: constraint, identifier: "first2")
+        let uuid = UUID(uuidString: scannedCode)!
+        let constraint = CLBeaconIdentityConstraint(uuid: uuid)
+        let beaconRange = CLBeaconRegion(beaconIdentityConstraint: constraint, identifier: "DeuzemApp")
         
         locationManager.stopMonitoring(for: beaconRange)
         locationManager.stopRangingBeacons(satisfying: constraint)
-        print("disappear")
+        print("stopIBeacon")
     }
     
     func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
@@ -75,7 +78,7 @@ class IBeaconDetector: NSObject, CLLocationManagerDelegate, ObservableObject {
             else {
                 self.lastDistance = .unknown
                 self.accuracy = 0.0
-                print("beacon first no")
+                print("beacon no first")
             }
             
             print("\n")
@@ -83,4 +86,12 @@ class IBeaconDetector: NSObject, CLLocationManagerDelegate, ObservableObject {
             print("Updated Accuracy \(self.accuracy)")
         }
     }
+    
+    func didBeaconFind(beacons: [CLBeacon]) -> Bool{
+           if !beacons.isEmpty {
+               return true
+           } else {
+               return false
+           }
+       }
 }
