@@ -1,103 +1,142 @@
 //
-//  ContentView.swift
-//  DEUZEM
+//  QrScannerView.swift
+//  admin
 //
-//  Created by admin on 17.11.2023.
+//  Created by admin on 22.11.2023.
 //
 
-/*
+
 import SwiftUI
-import CoreData
- 
-struct HomeScreenView: View {
-    
-    
-    let navigationBarTitle: String = "Home Screen"
-    @State var lessons : [String] = ["Qr Scanner","Find iBeacon"]
-    
-    var body: some View {
-        NavigationStack{
-            ScrollView(.vertical){
-                HomeScreenStack(items: lessons){ lesson in
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 24.0)
-                            .foregroundStyle(.blue)
-                            .overlay {
-                                Text("\(lesson)")
-                                    .font(.largeTitle)
-                                    .fontWeight(.bold)
-                                    .foregroundStyle(.black)
-                                    
-                            }
-                        RoundedRectangle(cornerRadius: 24.0)
-                            .stroke(.blue, style: .init(lineWidth: 8))
-                            .background(.clear)
-                    }
-                }
+import CodeScanner
 
-            }
-            .scrollIndicators(.hidden)
-            .scrollTargetBehavior(.viewAligned)
-            .scrollBounceBehavior(.basedOnSize)
-            .navigationTitle(
-                navigationBarTitle
-            )
-            .navigationBarTitleDisplayMode(.large)
-            .background(Color.black.gradient)
+
+struct HomeScreenView: View{
+    
+    @StateObject var beaconDetector = BeaconDetector()
+
+    static var staticScannedCode: String = ""
+    @State private var errorMesage: String = ""
+    @State private var isPresentingScanner = false
+    @State private var didScanSuccessfully = false{
+        didSet{
+            beaconDetector.findBeacon()
         }
-        .preferredColorScheme(.dark)
     }
-}
-
-struct HomeScreenStack<T: Hashable, Content: View>: View  {
     
-    // MARK: - Properties
+    //MARK: - scanner sheet view
+    var scannerSheet: some View {
+        CodeScannerView(
+            codeTypes: [.qr],
+            showViewfinder: true,
+            shouldVibrateOnSuccess: true
+        ) { Result in
+            if case let .success(code) = Result{
+                HomeScreenView.staticScannedCode = code.string.uppercased()
+                self.isPresentingScanner = false
+                self.didScanSuccessfully = true
+               
+                
+                print("HomeScreenView.staticScannedCode ="
+                      ,HomeScreenView.staticScannedCode
+                      ,HomeScreenView.staticScannedCode.count )
+                print("didScanSuccessfully = " ,
+                      didScanSuccessfully)
+                print("qrScannerController.beaconDetector.isFetchDataFromScanner(data: HomeScreenView.staticScannedCode = ",
+                      beaconDetector.isFetchDataFromScannerRight(data: HomeScreenView.staticScannedCode))
+                      
+            }
+            if case let .failure(failure) = Result {
+                errorMesage = failure.localizedDescription
+                didScanSuccessfully = false
+                print( "errorMesage = " ,errorMesage)
+            }
+        }
+    }
     
-    let items: [T]
     
-    let content: (T) -> Content
     
-    // MARK: - Life circle
-
     var body: some View {
-            LazyVStack(spacing: 5, content: itemsTpl)
-            .padding(24)
-            .scrollTargetLayout()
-    }
-    
-    // MARK: - Template
-    
-    private func itemsTpl() -> some View {
-        ForEach(items, id : \.hashValue) { item in
-            
-            NavigationLink {
-                if(item == items[0]){
-                    QrScannerView()
+        NavigationView {
+            VStack(spacing: 10){
+                Text(beaconDetector.didFindBeacon ? "Succesful ✅": "Unsuccesful ❌")
+                    .multilineTextAlignment(.leading)
+                    .padding(.vertical, 80)
+                    .padding(.horizontal)
+                    .foregroundStyle(.blue)
+                    .font(.title2)
+                Spacer()
+                
+                
+                
+                Button(action: {
+                    // Devamsızlık Aksiyonu
+                    
+                }, label: {
+                    CustomButton(text: "Devamsızlık", textColor: .white, font: .title, fontWeight: .bold, buttonColor: .blue, roundedRectangleRadius: 15, padding: 60, frameMaxHeight: 70, frameMaxWidth: .infinity)
+                })
+                .padding(.vertical, 30)
+                
+                
+                
+                
+                Button(action: {
+                    self.isPresentingScanner = true
+                }, label: {
+                    CustomButton(text: "Qr Tara", textColor: .white, font: .title, fontWeight: .bold, buttonColor: .blue, roundedRectangleRadius: 15, padding: 60, frameMaxHeight: 70, frameMaxWidth: .infinity)
+                })
+                .padding(.bottom, 60)
+                
+                
+                
+                
+                .sheet(isPresented: $isPresentingScanner){
+                    self.scannerSheet
+                    
                 }
-                else if(item == items[1]){
-                    ContentView()
-                }
-            } label: {
-                content(item)
-                .containerRelativeFrame(
-                    .vertical,
-                    count: 10,
-                    span: 7,
-                    spacing: 24
-                )
-                .scrollTransition { content, phase in
-                    content
-                       
-                        .blur(radius: phase.isIdentity ? 0 : 5)
-                        .scaleEffect(phase.isIdentity ? 1 : 0.8)
-                        .opacity(phase.isIdentity ? 1 : 0)
-                }
+                
             }
         }
     }
 }
 
 #Preview {
-    HomeScreenView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+    HomeScreenView()
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//MARK: - NO Library to scan
+
+/*
+struct QrScannerView: View {
+    @State var scanResult = "No QR code detected"
+ 
+    var body: some View {
+        ZStack(alignment: .bottom) {
+            QRScanner(result: $scanResult)
+ 
+            Text(scanResult)
+                .padding()
+                .background(.blue)
+                .foregroundColor(.white)
+                .padding(.bottom)
+                
+        }
+    }
+}
+
+#Preview {
+    QrScannerView()
 }
 */

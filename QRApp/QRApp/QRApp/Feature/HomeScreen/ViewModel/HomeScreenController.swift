@@ -5,46 +5,8 @@
 //  Created by admin on 23.11.2023.
 //
 
-class QRScannerController{
-    
-    let uuid: String
-    let detector: BeaconDetector
-    
-    init(uuid: String) {
-        self.uuid = uuid
-        detector = BeaconDetector(scannedCode: uuid)
-    }
-    
-    
-    
-    
-    
-    
-    func findBeacon(){
-        detector.isStartBeacon.toggle()
-        
-        //if isStartBeacon is false, reset the lastdistance and accuracy
-        if detector.isStartBeacon == false {
-            detector.lastDistance = .unknown
-            detector.accuracy = 0.0
-            
-        }
-        detector.locationManagerDidChangeAuthorization(detector.locationManager)
-        
-    }
-    
-    func  isFetchDataFromScanner(data: String) -> Bool{
-    
-        if(data.count == 36){
-            let strData = data.split(separator: "-")
-            print(strData.count , "str data")
-            if(strData.count == 5){
-                return true
-            }
-            return false
-        }
-        return false
-    }
+class HomeScreenController{
+
 }
 
 

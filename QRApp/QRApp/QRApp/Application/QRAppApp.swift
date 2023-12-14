@@ -12,7 +12,7 @@ struct QRAppApp: App {
 
     var body: some Scene {
         WindowGroup {
-            QrScannerView()
+            HomeScreenView()
         }
     }
 }

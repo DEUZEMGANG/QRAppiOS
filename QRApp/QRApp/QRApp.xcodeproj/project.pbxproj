@@ -9,16 +9,15 @@
 /* Begin PBXBuildFile section */
 		845ED7712B1615B9001F0A10 /* SignInUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845ED7702B1615B9001F0A10 /* SignInUpView.swift */; };
 		845ED7752B1624BA001F0A10 /* BeaconDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845ED7742B1624BA001F0A10 /* BeaconDetector.swift */; };
-		8468A1B82B0F841C0035CE4F /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8468A1B72B0F841C0035CE4F /* HomeScreenView.swift */; };
 		8468A1BA2B0F84610035CE4F /* Persistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8468A1B92B0F84610035CE4F /* Persistance.swift */; };
 		8468A1C02B0F87010035CE4F /* QRApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8468A1BE2B0F87010035CE4F /* QRApp.xcdatamodeld */; };
-		8468A1C22B0F8FAE0035CE4F /* QRScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8468A1C12B0F8FAE0035CE4F /* QRScannerController.swift */; };
+		8468A1C22B0F8FAE0035CE4F /* HomeScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8468A1C12B0F8FAE0035CE4F /* HomeScreenController.swift */; };
 		849F69172B2A321B001D35B3 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F69162B2A321B001D35B3 /* CustomButton.swift */; };
 		84A6FBDE2B1084C4003156FC /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A6FBDD2B1084C4003156FC /* Color.swift */; };
 		84C044352B28DA47000DD8B4 /* IBeaconModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C044342B28DA47000DD8B4 /* IBeaconModel.swift */; };
 		84FA154C2B21EED9003B47B2 /* BeaconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA154B2B21EED9003B47B2 /* BeaconView.swift */; };
 		BC58B4902B0F5BF00073EFFF /* QRAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC58B48F2B0F5BF00073EFFF /* QRAppApp.swift */; };
-		BC58B4922B0F5BF00073EFFF /* QrScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC58B4912B0F5BF00073EFFF /* QrScannerView.swift */; };
+		BC58B4922B0F5BF00073EFFF /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC58B4912B0F5BF00073EFFF /* HomeScreenView.swift */; };
 		BC58B4942B0F5BF50073EFFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC58B4932B0F5BF50073EFFF /* Assets.xcassets */; };
 		BC58B4972B0F5BF50073EFFF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC58B4962B0F5BF50073EFFF /* Preview Assets.xcassets */; };
 		BC58B4A02B0F608E0073EFFF /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = BC58B49F2B0F608E0073EFFF /* CodeScanner */; };
@@ -27,17 +26,16 @@
 /* Begin PBXFileReference section */
 		845ED7702B1615B9001F0A10 /* SignInUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUpView.swift; sourceTree = "<group>"; };
 		845ED7742B1624BA001F0A10 /* BeaconDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconDetector.swift; sourceTree = "<group>"; };
-		8468A1B72B0F841C0035CE4F /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		8468A1B92B0F84610035CE4F /* Persistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistance.swift; sourceTree = "<group>"; };
 		8468A1BF2B0F87010035CE4F /* QRApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QRApp.xcdatamodel; sourceTree = "<group>"; };
-		8468A1C12B0F8FAE0035CE4F /* QRScannerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerController.swift; sourceTree = "<group>"; };
+		8468A1C12B0F8FAE0035CE4F /* HomeScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenController.swift; sourceTree = "<group>"; };
 		849F69162B2A321B001D35B3 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		84A6FBDD2B1084C4003156FC /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		84C044342B28DA47000DD8B4 /* IBeaconModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBeaconModel.swift; sourceTree = "<group>"; };
 		84FA154B2B21EED9003B47B2 /* BeaconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconView.swift; sourceTree = "<group>"; };
 		BC58B48C2B0F5BF00073EFFF /* QRApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC58B48F2B0F5BF00073EFFF /* QRAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRAppApp.swift; sourceTree = "<group>"; };
-		BC58B4912B0F5BF00073EFFF /* QrScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrScannerView.swift; sourceTree = "<group>"; };
+		BC58B4912B0F5BF00073EFFF /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		BC58B4932B0F5BF50073EFFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC58B4962B0F5BF50073EFFF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BC58B49D2B0F5FB10073EFFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -58,9 +56,9 @@
 		845ED7722B162492001F0A10 /* Ibeacon */ = {
 			isa = PBXGroup;
 			children = (
+				84B716892B29E48E00D8F3E7 /* Model */,
 				84FA154D2B21EF58003B47B2 /* View */,
 				84FA154F2B21EF6E003B47B2 /* ViewModel */,
-				84B716892B29E48E00D8F3E7 /* IBeaconModel */,
 			);
 			path = Ibeacon;
 			sourceTree = "<group>";
@@ -81,19 +79,11 @@
 			path = Component;
 			sourceTree = "<group>";
 		};
-		84A6FBD72B108004003156FC /* QrScanner */ = {
+		84A6FBD72B108004003156FC /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
 				84A6FBE02B108625003156FC /* View */,
-				84C2AEE52B0F7AA30034B48B /* ViewModels */,
-			);
-			path = QrScanner;
-			sourceTree = "<group>";
-		};
-		84A6FBD82B108024003156FC /* HomeScreen */ = {
-			isa = PBXGroup;
-			children = (
-				84C2AEE62B0F7ABF0034B48B /* View */,
+				84C2AEE52B0F7AA30034B48B /* ViewModel */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -127,7 +117,7 @@
 		84A6FBE02B108625003156FC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BC58B4912B0F5BF00073EFFF /* QrScannerView.swift */,
+				BC58B4912B0F5BF00073EFFF /* HomeScreenView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -156,12 +146,12 @@
 			path = CoreLocation;
 			sourceTree = "<group>";
 		};
-		84B716892B29E48E00D8F3E7 /* IBeaconModel */ = {
+		84B716892B29E48E00D8F3E7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				84C044342B28DA47000DD8B4 /* IBeaconModel.swift */,
 			);
-			path = IBeaconModel;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		84C0442E2B28D8BB000DD8B4 /* Application */ = {
@@ -192,29 +182,20 @@
 		84C044332B28DA2A000DD8B4 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				84A6FBD82B108024003156FC /* HomeScreen */,
 				84A6FBDA2B10806F003156FC /* LogIn */,
-				84A6FBD72B108004003156FC /* QrScanner */,
+				84A6FBD72B108004003156FC /* HomeScreen */,
 				845ED7722B162492001F0A10 /* Ibeacon */,
 				849F69152B2A31FC001D35B3 /* Component */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
 		};
-		84C2AEE52B0F7AA30034B48B /* ViewModels */ = {
+		84C2AEE52B0F7AA30034B48B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				8468A1C12B0F8FAE0035CE4F /* QRScannerController.swift */,
+				8468A1C12B0F8FAE0035CE4F /* HomeScreenController.swift */,
 			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		84C2AEE62B0F7ABF0034B48B /* View */ = {
-			isa = PBXGroup;
-			children = (
-				8468A1B72B0F841C0035CE4F /* HomeScreenView.swift */,
-			);
-			path = View;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		84FA154D2B21EF58003B47B2 /* View */ = {
@@ -347,12 +328,11 @@
 			files = (
 				8468A1C02B0F87010035CE4F /* QRApp.xcdatamodeld in Sources */,
 				84FA154C2B21EED9003B47B2 /* BeaconView.swift in Sources */,
-				8468A1B82B0F841C0035CE4F /* HomeScreenView.swift in Sources */,
 				84C044352B28DA47000DD8B4 /* IBeaconModel.swift in Sources */,
 				84A6FBDE2B1084C4003156FC /* Color.swift in Sources */,
 				8468A1BA2B0F84610035CE4F /* Persistance.swift in Sources */,
-				8468A1C22B0F8FAE0035CE4F /* QRScannerController.swift in Sources */,
-				BC58B4922B0F5BF00073EFFF /* QrScannerView.swift in Sources */,
+				8468A1C22B0F8FAE0035CE4F /* HomeScreenController.swift in Sources */,
+				BC58B4922B0F5BF00073EFFF /* HomeScreenView.swift in Sources */,
 				849F69172B2A321B001D35B3 /* CustomButton.swift in Sources */,
 				845ED7712B1615B9001F0A10 /* SignInUpView.swift in Sources */,
 				BC58B4902B0F5BF00073EFFF /* QRAppApp.swift in Sources */,
