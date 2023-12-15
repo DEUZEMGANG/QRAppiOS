@@ -89,6 +89,8 @@ struct HomeScreenView: View{
                 
                 
                 
+                
+                
                 .sheet(isPresented: $isPresentingScanner){
                     self.scannerSheet
                     
