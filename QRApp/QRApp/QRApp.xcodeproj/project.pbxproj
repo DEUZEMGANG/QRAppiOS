@@ -14,6 +14,9 @@
 		8468A1C22B0F8FAE0035CE4F /* HomeScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8468A1C12B0F8FAE0035CE4F /* HomeScreenController.swift */; };
 		849F69172B2A321B001D35B3 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F69162B2A321B001D35B3 /* CustomButton.swift */; };
 		84A6FBDE2B1084C4003156FC /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A6FBDD2B1084C4003156FC /* Color.swift */; };
+		84BA63C92B30A83D0008ECF6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA63C82B30A83D0008ECF6 /* Extensions.swift */; };
+		84BA63CB2B30A8500008ECF6 /* IbeaconViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA63CA2B30A8500008ECF6 /* IbeaconViewModel.swift */; };
+		84BA63CD2B30A8600008ECF6 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA63CC2B30A8600008ECF6 /* CoreDataManager.swift */; };
 		84C044352B28DA47000DD8B4 /* IBeaconModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C044342B28DA47000DD8B4 /* IBeaconModel.swift */; };
 		84FA154C2B21EED9003B47B2 /* BeaconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA154B2B21EED9003B47B2 /* BeaconView.swift */; };
 		BC58B4902B0F5BF00073EFFF /* QRAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC58B48F2B0F5BF00073EFFF /* QRAppApp.swift */; };
@@ -31,6 +34,9 @@
 		8468A1C12B0F8FAE0035CE4F /* HomeScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenController.swift; sourceTree = "<group>"; };
 		849F69162B2A321B001D35B3 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		84A6FBDD2B1084C4003156FC /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		84BA63C82B30A83D0008ECF6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = ../../../../../../../../Documents/Extensions.swift; sourceTree = "<group>"; };
+		84BA63CA2B30A8500008ECF6 /* IbeaconViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IbeaconViewModel.swift; sourceTree = "<group>"; };
+		84BA63CC2B30A8600008ECF6 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		84C044342B28DA47000DD8B4 /* IBeaconModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBeaconModel.swift; sourceTree = "<group>"; };
 		84FA154B2B21EED9003B47B2 /* BeaconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconView.swift; sourceTree = "<group>"; };
 		BC58B48C2B0F5BF00073EFFF /* QRApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +105,7 @@
 		84A6FBDC2B10845B003156FC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				84BA63C82B30A83D0008ECF6 /* Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -134,6 +141,7 @@
 		84B716872B29E27A00D8F3E7 /* CoreDataManager */ = {
 			isa = PBXGroup;
 			children = (
+				84BA63CC2B30A8600008ECF6 /* CoreDataManager.swift */,
 			);
 			path = CoreDataManager;
 			sourceTree = "<group>";
@@ -209,6 +217,7 @@
 		84FA154F2B21EF6E003B47B2 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				84BA63CA2B30A8500008ECF6 /* IbeaconViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -333,9 +342,12 @@
 				8468A1BA2B0F84610035CE4F /* Persistance.swift in Sources */,
 				8468A1C22B0F8FAE0035CE4F /* HomeScreenController.swift in Sources */,
 				BC58B4922B0F5BF00073EFFF /* HomeScreenView.swift in Sources */,
+				84BA63C92B30A83D0008ECF6 /* Extensions.swift in Sources */,
 				849F69172B2A321B001D35B3 /* CustomButton.swift in Sources */,
+				84BA63CB2B30A8500008ECF6 /* IbeaconViewModel.swift in Sources */,
 				845ED7712B1615B9001F0A10 /* SignInUpView.swift in Sources */,
 				BC58B4902B0F5BF00073EFFF /* QRAppApp.swift in Sources */,
+				84BA63CD2B30A8600008ECF6 /* CoreDataManager.swift in Sources */,
 				845ED7752B1624BA001F0A10 /* BeaconDetector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
